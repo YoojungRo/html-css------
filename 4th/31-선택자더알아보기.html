@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>선택자 더 알아보기</title>
+    <style>
+        /*
+        기호와 함께 사용하는 속성 선택자
+        * : 값의 포함 여부
+        ^ : 값의 시작 여부
+        $ : 값의 끝 여부
+        */
+        [width $= "0"]{
+            border: 5px dashed red;
+        }
+
+        p > em{
+            color: blue;
+        }
+        /*
+        형제 선택자는 뒤이어 등장하는 형제들을 대상으로 한다!
+        */
+        #three + p{
+            color: orange;
+        }
+
+
+    </style>
+</head>
+<body>
+    <img src="images/더스트.jpeg" width="120" alt="더스트">
+    <img src="images/더스트.jpeg" width="120">
+    <img src="images/더스트.jpeg" width="120" id="three">
+    <p>더스트는 나의 고양이이다</p>
+    <p>같이 산 지는 6년이 됐다.</p>
+    <p>순 우리말 이름은 '먼지'인데,</p>
+    <p>이 이름은 너무 많은 <em>고양이들이</em> 사용하고 있어 쓰지 않게 되었다.</p>
+    <p>유니크하고 독특한 이름의 <strong>더스트 고양이</strong>를 마구 귀여워해줘라.</p>
+</body>
+</html>
