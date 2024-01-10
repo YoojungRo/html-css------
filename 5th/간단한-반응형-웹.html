@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미디어 쿼리를 사용한 화면 스타일 및 내용 변경</title>
+<style>
+    /* 기본 스타일 */
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        transition: all 0.3s ease-in-out; /* 스타일 변경 시 부드럽게 전환 */
+    }
+
+    /* 노트북 사이즈 (예: 1280px 이하) */
+    @media (max-width: 1280px) {
+        body {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        h2::before {
+            content: "1. 노트북 사이즈일 때 화면 변화 - ";
+        }
+    }
+
+    /* 아이패드 프로 사이즈 (예: 1024px 이하) */
+    @media (max-width: 1024px) {
+        body {
+            background-color: #d3e0ea;
+            color: #555;
+        }
+        h2::before {
+            content: "2. 아이패드 프로 사이즈일 때 화면 변화 - ";
+        }
+    }
+
+    /* 아이폰 15 프로 사이즈 (예: 896px 이하) */
+    @media (max-width: 896px) {
+        body {
+            background-color: #c8e6c9;
+            color: #444;
+        }
+        h2::before {
+            content: "3. 아이폰 15 프로 사이즈일 때 화면 변화 - ";
+        }
+    }
+
+    /* 저해상도 화면 (예: 480px 이하) */
+    @media (max-width: 480px) {
+        body {
+            background-color: #ffcdd2;
+            color: #800000;
+        }
+        h2::before {
+            content: "4. 저해상도 화면일 때 화면 변화 - ";
+        }
+    }
+</style>
+</head>
+<body>
+
+<h1>사이즈에 따른 배경색과 텍스트 스타일 변경</h1>
+<h2></h2>
+<p>화면 크기에 따라 배경색과 텍스트 스타일이 차례대로 변경됩니다.</p>
+
+</body>
+</html>
